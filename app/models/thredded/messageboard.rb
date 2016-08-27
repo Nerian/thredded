@@ -18,7 +18,7 @@ module Thredded
                   )
                 )
 
-    validates :name, uniqueness: true, length: { maximum: 60 }, presence: true
+    validates :name, length: { maximum: 60 }, presence: true
     validates :topics_count, numericality: true
 
     has_many :categories, dependent: :destroy
